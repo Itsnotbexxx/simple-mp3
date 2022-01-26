@@ -7,14 +7,22 @@
 
 import UIKit
 import CoreData
+import Firebase
+import AVFoundation
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
+    var audioPlayer = AVAudioPlayer()
+    var isPlay = Bool()
+    var isPause = Bool()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        FirebaseApp.configure()
         return true
     }
 
